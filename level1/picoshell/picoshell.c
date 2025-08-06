@@ -58,3 +58,18 @@ int    picoshell(char **cmds[])
         wait(NULL);
     return 0;
 }
+
+// int main(void)
+// {
+//     char *cmd1[] = {"ls", "-l", NULL};
+//     char *cmd2[] = {"grep", ".c", NULL};
+//     char *cmd3[] = {"wc", "-l", NULL};
+
+//     // Array of commands
+//     char **cmds[] = {cmd1, cmd2, cmd3, NULL};
+
+//     // Run the pipeline
+//     picoshell(cmds);
+
+//     return 0;
+// }
