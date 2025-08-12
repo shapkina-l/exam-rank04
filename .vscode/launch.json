@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug vbc",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/level2/vbc/vbc",   // Executable path
+            "args": ["2*(8+9)+3*4"],                         // Test input
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/level2/vbc",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build vbc",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}

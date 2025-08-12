@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build vbc",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",                 // Enable debug info
+                "level2/vbc/vbc.c",          // Correct relative path to source
+                "-o", "level2/vbc/vbc"       // Output executable in same folder
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}

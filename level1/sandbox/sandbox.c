@@ -81,3 +81,35 @@ int sandbox(void (*f)(void), unsigned int timeout, bool verbose)
 	}
 	return (-1);
 }
+
+// void nice_function(void)
+// {
+//     printf("Executing nice function...\n");
+//     // Just return, exits with 0
+// }
+
+// void bad_function(void)
+// {
+//     printf("Executing bad function...\n");
+//     exit(42); // Exits with non-zero code
+// }
+
+// void timeout_function(void)
+// {
+//     printf("Executing timeout function...\n");
+//     while (1) ; // Infinite loop
+// }
+
+// int main(void)
+// {
+//     printf("== Testing nice function ==\n");
+//     sandbox(nice_function, 2, true);
+
+//     printf("\n== Testing bad function ==\n");
+//     sandbox(bad_function, 2, true);
+
+//     printf("\n== Testing timeout function ==\n");
+//     sandbox(timeout_function, 2, true);
+
+//     return 0;
+// }
