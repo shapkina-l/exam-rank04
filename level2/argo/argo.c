@@ -34,11 +34,15 @@ json    parse_map(FILE *stream)
             return (json_map);
         }
         json_map.map.size++;
-        json_map.map.data = realloc
-        //
-    } while (condition); //
-    //
-
+        json_map.map.data = realloc(json_map.map.data, json_map.map.size * sizeof(pair));
+        json_map.map.data[json_map.map.size - 1] = new_pair;
+    } while (accept(stream, ','));
+    if (!accept(stream, '}'))
+    {
+        g_error = 1;
+        return (json_map);
+    }
+    return (json_map);
 }
 
 char *parse_string(FILE *stream)

@@ -24,4 +24,13 @@ typedef struct pair {
     json    value;
 } pair;
 
+int     argo(json *dst, FILE *stream);
+int     expect(FILE *stream, char c);
+void    unexpected(FILE *stream);
+int     accept(FILE *stream, char c);
+int     peek(FILE *stream);
+char    *parse_string(FILE *stream);
+json    parse_json(FILE *stream);
+void	free_json(json j);
+
 #endif
